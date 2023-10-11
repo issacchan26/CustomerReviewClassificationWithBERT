@@ -11,23 +11,6 @@ def load_data(path, name):
     dataset = Dataset.from_pandas(df, split=name)
     return dataset
 
-def forward_pass(sentence):
-    inputs = tokenizer(sentence, return_tensors="pt")
-    inputs = inputs.to(device)
-    with torch.no_grad():
-        logits = model(**inputs).logits
-
-    predicted_class_id = logits.argmax().item()
-    pred = model.config.id2label[predicted_class_id]
-    return predicted_class_id, pred
-
-def get_review_classification(df):
-    df['prediction'] = ''
-    for idx, review in df['review'].iteritems():
-        pred = forward_pass(review)
-        df.loc[idx, 'prediction'] = pred
-    return df
-
 def preprocess_function(examples):
     return tokenizer(examples["text"], padding='max_length', truncation=True)
 
