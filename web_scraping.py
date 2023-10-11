@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import nltk
 from nltk.tokenize import word_tokenize
-#nltk.download('punkt')
+nltk.download('punkt')
 
 def get_parser(soup, review_list, overall_rating_list):
     reviews = soup.find_all('span', {'data-testid':'wrapper-tag', 'class':'t9JcvSL3Bsj1lxMSi3pz h_kb2PFOoyZe1skyGiz9 DUkDy8G7CgNvYcWgJYPN'}) 
