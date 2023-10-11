@@ -46,9 +46,9 @@ if __name__ == '__main__':
     model = AutoModelForSequenceClassification.from_pretrained("LiYuan/amazon-review-sentiment-analysis")
     model = model.to(device)
     
-    train_path = '/home/ping_linux/PycharmProjects/issac/restaurant_review/data/train.csv'
-    eval_path = '/home/ping_linux/PycharmProjects/issac/restaurant_review/data/eval.csv'
-    checkpoints_path = '/home/ping_linux/PycharmProjects/issac/restaurant_review/checkpoints'
+    train_path = '/path to/data/train.csv'
+    eval_path = '/path to/data/eval.csv'
+    checkpoints_path = '/path to/checkpoints'
 
     train_dataset = load_data(train_path, name='train')
     eval_dataset = load_data(eval_path, name='eval')
