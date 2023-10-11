@@ -1,5 +1,4 @@
-# CustomerReviewClassificationWithBERT
-OpenTable Reviews Classification with BERT and Transfer Learning.  
+# OpenTable Reviews Classification with BERT and Transfer Learning
 This repo provides end-to-end pipeline for OpenTable Reviews Classification with BERT and Transfer Learning, as well as data collection with Web Scraping.  
 
 ## Data Collection
