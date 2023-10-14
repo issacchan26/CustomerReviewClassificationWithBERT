@@ -2,6 +2,7 @@
 This repo provides end-to-end pipeline for OpenTable Reviews Classification with BERT and Transfer Learning, as well as data collection with Web Scraping.  
 
 ## Data Collection
+The detailed explanation of data collection is in [notebook](review_classification.ipynb)
 The data collection script is provided in [web_scraping.py](web_scraping.py), it will output one training df and one validation df.  
 1. Find the target restaurant website in OpenTable, go to page 2 of review page.
 2. Copy the url of review page 2, e.g. https://www.opentable.ca/r/chez-mal-manchester?page=2&sortBy=newestReview
