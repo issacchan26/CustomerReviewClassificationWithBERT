@@ -10,8 +10,8 @@ The data collection script is provided in [web_scraping.py](web_scraping.py), it
 4. Run the main script, it will save the df as csv with two columns: reviews and overall rating of the restaurants.
 
 ## Data Structure 
-The model takes csv file as input and transform into dataset, while takes review text as input and output ID from 0 to 4, where the id to label dictionary is:  
-{0:'1 stars', 1:'2 stars', 2:'3 stars', 3:'4 stars', 4:'5 stars',}  
+The model in [train.py](train.py) takes csv file as input and transform into dataset, while takes review text as input and output ID from 0 to 4, where the id to label dictionary is:  
+{0:'1 stars', 1:'2 stars', 2:'3 stars', 3:'4 stars', 4:'5 stars'}  
 
 Sample csv to dataframe format (overall rating is from 0 to 4):
 
@@ -29,6 +29,8 @@ Sample csv to dataframe format (overall rating is from 0 to 4):
 13441                                         Great food               4
 13442  Great food and excellent service. We’ll be back!!               4
 ```
+
+For classification of 3 classes in [train_3class.py](train_3class.py), the label dictionary is: {0:'negative', 1:'neutral', 2:'positive'}.
 
 ## Usage
 Please change the file/folder path in [train.py](train.py) as below:  
