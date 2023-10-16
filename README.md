@@ -59,3 +59,7 @@ The default training_args is listed below:
 ## Transfer Learning
 This repo is using [LiYuan/amazon-review-sentiment-analysis](https://huggingface.co/LiYuan/amazon-review-sentiment-analysis) as our pretrained model, then we applied our own dataset for fine tuning. The pretrained model is trained on [Amazon US Customer Reviews Dataset](https://www.kaggle.com/datasets/cynthiarempel/amazon-us-customer-reviews-dataset) with bert-base-multilingual-uncased model.  
 We chose this pretrained model because it provides similar data from customer. They trained on product reviews while we focus on restaurant reviews, they also trained on the label from 5 stars to 1 stars, which matches our need.  
+
+## Accuracy Improvement
+The original [train.py](train.py) provides classification for 5 classes {0,1,2,3,4}, which representing 1 star to 5 star.  
+The new [train_3class.py](train_3class.py) reduce the class to {0,1,2} that represents {negative, neutral, positive}. Validation accuracy improved from ~0.7 to 0.87 with 2 epoches of training.
